@@ -35,7 +35,3 @@ yarn-error.*
 *.tsbuildinfo
 /assets/pics
 /Data
-package.json
-package-lock.json
-package-lock.json
-package-lock.json
