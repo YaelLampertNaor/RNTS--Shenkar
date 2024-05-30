@@ -36,3 +36,5 @@ yarn-error.*
 /assets/pics
 /Data
 /Types
+Components/FlatListex.tsx
+Components/Flexbox.tsx
