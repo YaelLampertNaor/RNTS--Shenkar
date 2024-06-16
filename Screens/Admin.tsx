@@ -1,4 +1,4 @@
-import { View, TextInput, Text, Dimensions, SafeAreaView, TouchableOpacity, StyleSheet, ScrollView, Modal, Alert, Pressable } from 'react-native'
+import { View, TextInput, Text, Dimensions, SafeAreaView, TouchableOpacity, StyleSheet, ScrollView, Modal, Alert, Pressable, Switch } from 'react-native'
 import React, { useEffect, useState, useContext } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { AdminProps } from '../Types/props_type';
@@ -51,8 +51,11 @@ export default function Admin() {
     }
   }
 
+  function toggleSwitch() { setIsActive(!isActive) }
+  
   //-------- Add User Modal: --------
   const AddUserModal = () => {
+
     return (
       <View>
         <Modal
@@ -88,6 +91,14 @@ export default function Admin() {
 
               {/* //-------- Image input: -------- */}
               <TextInput style={[styles.inputStyle, styles.border]} placeholder='Profile Picture' onChangeText={(t) => setImage(t)} />
+
+              <Switch
+                trackColor={{ false: '#e6e6e6', true: '#cfe4cc' }}
+                thumbColor={isActive ? '#9cc493' : '#f4f3f4'}
+                ios_backgroundColor="#3e3e3e"
+                onValueChange={() => { toggleSwitch(); setIsActive(!isActive) }}
+                value={isActive}
+              />
 
               {/* //-------- Submit btn: -------- */}
               <TouchableOpacity style={[styles.button, styles.buttonClose]}
@@ -129,9 +140,9 @@ export default function Admin() {
             <TouchableOpacity onPress={() => navigation.navigate('AddDest')}>
               <Text>Add destinations</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('DeleteDest')}>
+            {/* <TouchableOpacity onPress={() => navigation.navigate('Capture')}>
               <Text>Delete destinations</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity onPress={() => navigation.navigate('EditDest')}>
               <Text>Edit destinations</Text>
             </TouchableOpacity>
