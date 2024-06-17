@@ -5,12 +5,12 @@ import Destination from '../Components/Destination'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { DestinationContext } from '../Context/DestinationContextProvider'
 
-export default function DestinationsList({ destinations }: DestinationsListProps) {
+export default function DestinationsList() {
     const { allDest } = useContext<any>(DestinationContext);
 
     useEffect(()=>{console.log(allDest)},[])
 
-    if (destinations.length == 0)
+    if (allDest.length == 0)
         return (
             <SafeAreaView style={styles.container}>
                 <View>

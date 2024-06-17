@@ -1,10 +1,8 @@
-import { StyleSheet } from 'react-native';
+import { Button, StyleSheet, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Flexboxex1 from './Components/Flexboxex1';
 import Images from './Components/Images';
-import dest from './Data/destinations.json';
-import usersData from './Data/users.json';
 import DestinationsList from './Screens/DestinationsList';
 import FlatListex from './Components/FlatListex';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -13,35 +11,36 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Login from './Screens/Login';
 import Admin from './Screens/Admin';
 import AddDest from './Screens/AddDest';
-import DeleteDest from './Screens/DeleteDest';
+import Capture from './Screens/Capture';
 import EditDest from './Screens/EditDest';
-import { useContext } from 'react';
 import UserContextProvider from './Context/UserContextProvider';
 import DestinationContextProvider from './Context/DestinationContextProvider';
 import DestinationPage from './Components/DestinationPage';
 
-//-------- GLOBAL Navigation stack & tab instances: --------
+
+//-------- GLOBAL Navigation stack tab & drawer instances: --------
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+// const Drawer = createDrawerNavigator();
 
-//-------- GLOBAL Admin screens function: --------
+//-------- GLOBAL Admin stack screens function: --------
 function AdminScreens() {
   return (
     <Stack.Navigator>
       <Stack.Screen name='Admin' component={() => <Admin />}
         options={{ headerShown: false }} />
       <Stack.Screen name='AddDest' component={AddDest} />
-      <Stack.Screen name='DeleteDest' component={DeleteDest} />
+      <Stack.Screen name='Capture' component={Capture} />
       <Stack.Screen name='EditDest' component={EditDest} />
     </Stack.Navigator>
   )
 }
 
-//-------- GLOBAL User screens function: --------
+//-------- GLOBAL User tab screens function: --------
 function UserScreens() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="AllDestinations" component={() => <DestinationsList destinations={dest} />}
+      <Tab.Screen name="AllDestinations" component={() => <DestinationsList />}
         options={{
           tabBarLabel: 'All Destinations',
           tabBarIcon: () => (<MaterialCommunityIcons name="compass" size={35} color="red" />)
@@ -56,7 +55,7 @@ function UserScreens() {
           tabBarLabel: 'Squares',
           tabBarIcon: () => (<MaterialCommunityIcons name="square-outline" size={35} color="blue" />)
         }} />
-      <Tab.Screen name="FlatListex" component={() => <FlatListex destinations={dest} />}
+      <Tab.Screen name="FlatListex" component={() => <FlatListex />}
         options={{
           tabBarLabel: 'FlatList',
           tabBarIcon: () => (<MaterialCommunityIcons name="flower" size={35} color="green" />)
@@ -67,6 +66,7 @@ function UserScreens() {
 
 //-------- Main App function: --------
 export default function App() {
+
   return (
     <UserContextProvider>
       <DestinationContextProvider>
