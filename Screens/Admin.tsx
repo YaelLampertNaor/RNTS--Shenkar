@@ -55,7 +55,6 @@ export default function Admin() {
   
   //-------- Add User Modal: --------
   const AddUserModal = () => {
-
     return (
       <View>
         <Modal
@@ -119,10 +118,10 @@ export default function Admin() {
     let mm = date.getMonth() + 1;
     let yyyy = date.getFullYear();
     if (dd < 10) {
-      dd = '0' + dd;
+      dd = '0' + dd; //08
     }
-    if (mm < 10) {
-      mm = '0' + mm;
+    if (mm < 10) { 
+      mm = '0' + mm; //03
     }
     setDob(`${yyyy}-${mm}-${dd}`);
   }

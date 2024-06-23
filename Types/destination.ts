@@ -5,6 +5,8 @@ export type DestinationType = {
     capital:string,
     is_direct_flight:boolean,
     main_img:string,
+    latitude:number,
+    longitude:number,
     images?:string[],
     desc?:string
 }

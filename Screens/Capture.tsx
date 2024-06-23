@@ -23,7 +23,7 @@ export default function Capture() {
     // Camera permissions are not granted yet.
     return (
       <View style={styles.container}>
-        <Text style={{ textAlign: 'center' }}>We need your permission to show the camera</Text>
+        <Text style={{ textAlign: 'center' }}>We need your permission to use the camera</Text>
         <Button onPress={requestPermission} title="grant permission" />
       </View>
     );
@@ -37,10 +37,10 @@ export default function Capture() {
   //-------- Take picture ASYNC function: --------
   const takePic = async () => {
     const photo = await cameraRef.current?.takePictureAsync({});
+    
     setUri(photo?.uri)
     console.log(JSON.stringify(photo));
   }
-
 
   //-------- What we render to the UI: --------
   return (

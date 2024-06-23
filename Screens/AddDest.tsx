@@ -110,7 +110,9 @@ export default function AddDest() {
           selectedTextStyle={styles.selectedTextStyle}
           inputSearchStyle={styles.inputSearchStyle}
           iconStyle={styles.iconStyle}
+
           data={continents}
+
           search
           maxHeight={300}
           labelField="label"
@@ -120,10 +122,12 @@ export default function AddDest() {
           value={continent}
           onFocus={() => setIsFocus(true)}
           onBlur={() => setIsFocus(false)}
+
           onChange={item => {
             setContinent(item.value);
             setIsFocus(false);
           }}
+          
           renderLeftIcon={() => (
             <AntDesign
               style={styles.icon}

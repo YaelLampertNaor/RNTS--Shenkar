@@ -79,6 +79,8 @@ export default function EditDest() {
               <View style={styles.editImage}>
                 <Image source={currentDest.main_img} style={{ height: 200, width: 200 }} />
               </View>
+
+              
               <TouchableOpacity style={[styles.button]} onPress={() => navigation.navigate('Capture')}>
                 <Text style={[styles.margin, styles.textStyle]}>Capture Image</Text>
               </TouchableOpacity>
