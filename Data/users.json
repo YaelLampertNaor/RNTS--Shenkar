@@ -1,0 +1,54 @@
+[
+    {
+        "id": 8642,
+        "firstName": "Monica",
+        "middleName":"E.",
+        "lastName": "Geller",
+        "dob": "1964-06-15",
+        "image": "https://decider.com/wp-content/uploads/2016/11/friends-monica.jpg?quality=80&strip=all",
+        "isActive": true
+    },
+    {
+        "id": 1234,
+        "firstName": "Ross",
+        "lastName": "Geller",
+        "dob": "1966-11-02",
+        "image": "https://images.immediate.co.uk/production/volatile/sites/3/2020/03/Ross_Unagi_Friends_Series-5016491.jpg",
+        "isActive": true
+    },
+    {
+        "id": 5678,
+        "firstName": "Rachel",
+        "middleName":"Karen",
+        "lastName": "Green",
+        "dob": "1969-02-11",
+        "image": "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2020/06/15/rachel.jpg",
+        "isActive": false
+    },
+    {
+        "id": 9753,
+        "firstName": "Joey",
+        "middleName":"Francis",
+        "lastName": "Tribbiani Jr.",
+        "dob": "1967-07-25",
+        "image": "https://focus.independent.ie/thumbor/uC4mTuVoYqfuRx6aecPtQ7o-5Ek=/43x0:1683x905/960x640/prod-mh-ireland/9cc49794-c0cc-11ed-a053-0210609a3fe2.jpg",
+        "isActive": true
+    },
+    {
+        "id": 8765,
+        "firstName": "Phoebe",
+        "lastName": "Buffay",
+        "dob": "1963-07-30",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJS0XBpYnp0WVpyhCj56V9HD3mVA59NFPv9QTd4DRxIS3tEGaiwRwg9CBDvIurdXG4kpVoSmsh1VcIzjyyFwCgv0HKBIlawntV6fGJ7GjWG1E3IEJCRy8m1lOiOknRUB9K8BT6gWW-r6FG/s640/CSXEPunUkAA2W2q.jpg",
+        "isActive": false
+    },
+    {
+        "id": 4321,
+        "firstName": "Chandler",
+        "middleName":"Muriel",
+        "lastName": "Bing",
+        "dob": "1969-08-19",
+        "image": "https://pyxis.nymag.com/v1/imgs/5fa/e29/c77102139bd5a89e44c227152d9b39609c-chandler-friends-the-one-where-everyone-.rhorizontal.w700.jpg",
+        "isActive": true
+    }
+]

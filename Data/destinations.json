@@ -1,0 +1,51 @@
+[
+    {
+        "code":3,
+        "destination_name":"Italy",
+        "continent":"Europe",
+        "capital":"Rome",
+        "is_direct_flight":true,
+        "main_img":"https://assets.cityexperiences.com/wp-content/uploads/2022/02/Civitavecchia_Rome_Italy_4899_Trevi_Fountain.jpg",
+        "latitude":41.897489360711695,
+        "longitude":12.478808132167675,
+        "images":["https://static01.nyt.com/images/2023/10/05/multimedia/05hours-florence-qbmg/05hours-florence-qbmg-videoSixteenByNine3000.jpg","https://www.travelanddestinations.com/wp-content/uploads/2019/05/Beautiful-places-in-Italy-Burano.jpg", "https://cdn.aarp.net/content/dam/aarp/travel/international/2021/06/1140-grand-canal-venice.jpg", "https://i.natgeofe.com/k/fda953d5-2a9b-4955-8d41-8a7e34160323/italy-rome_3x2.jpg?wp=1&w=1084.125&h=721.875", "https://content.r9cdn.net/rimg/dimg/b1/d0/b63ba849-city-53596-163d1a05b9e.jpg?width=1366&height=768&xhint=1494&yhint=1443&crop=true", "https://www.campinglagomaggiore.com/wp-content/uploads/2018/11/camping-lago-maggiore-02.jpg"],
+        "desc":"Italy is a boot-shaped peninsula that juts out of southern Europe into the Adriatic Sea, Tyrrhenian Sea, Mediterranean Sea, and other waters. Its location has played an important role in its history. The sea surrounds Italy, and mountains crisscross the interior, dividing it into regions.",
+    },
+    
+    {
+        "code":1,
+        "destination_name":"Tanzania",
+        "continent":"Africa",
+        "capital":"Dodoma",
+        "is_direct_flight":false,
+        "main_img":"https://cdn.audleytravel.com/3000/2148/79/8004364-mount-kilimanjaro-national-park.jpg",
+        "latitude":-6.1821571523387755,
+        "longitude":35.74516618314787,
+        "desc":"Tanzania is mountainous and densely forested in the northeast, where Mount Kilimanjaro is located. Three of Africa's Great Lakes are partly within Tanzania. To the north and west lie Lake Victoria, Africa's largest lake, and Lake Tanganyika, the continent's deepest lake, known for its unique species of fish."
+    },
+
+    {
+        "code":2,
+        "destination_name":"Mexico",
+        "continent":"North America",
+        "capital":"Mexico City",
+        "is_direct_flight":false,
+        "main_img":"https://a.cdn-hotels.com/gdcs/production177/d85/60b28a39-d112-44a5-b21a-01a74c665446.jpg",
+        "latitude":19.439229372586095,
+        "longitude":-99.1408783069147,
+        "images":["https://cdn.britannica.com/74/2574-050-C1EDBDAD/Mexico-map-boundaries-cities-locator.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUcvZXkSBEL-crzBHF4XzgJQHaoDeIWTd2m1QFhhvhw&s","https://traveler.marriott.com/wp-content/uploads/2021/10/Mexico-City-GI-1064279806.jpg", "https://www.travelandleisure.com/thmb/TclJ_n6VOoScGo_6USUucHz3pbw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cancun-mexico-hotels-tourism-now-CANCUNFIFTY0521-dfb554b3726b40e2b6102eaeb83b5668.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1200px-Flag_of_Mexico.svg.png"],
+        "desc":"Mexico is the fifth-largest country in the Americas and the 14th largest in the world. It is the 11th most populated country and the largest Spanish speaking country. Mexico is a federation comprising thirty-one states and a Federal District, the capital city."
+    },
+
+    {
+        "code":4,
+        "destination_name":"Vietnam",
+        "continent":"Asia",
+        "capital":"Hanoi",
+        "is_direct_flight":true,
+        "main_img":"https://www.tripsavvy.com/thmb/oanytAMNE7TxjzhJOEqSY1z9Y0k=/2119x1414/filters:no_upscale():max_bytes(150000):strip_icc()/riceterrace_village-633fda1d92a2473fb615b618e29eb793.jpg",
+        "latitude":21.028342769016483,
+        "longitude":105.83661962650451,
+        "desc":"Vietnam is a long, narrow nation shaped like the letter s. It is in Southeast Asia on the eastern edge of the peninsula known as Indochina. Its neighbors include China to the north and Laos and Cambodia to the west. The South China Sea lies to the east and south."
+    }
+]
