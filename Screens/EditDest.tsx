@@ -5,6 +5,7 @@ import { DestinationContext } from '../Context/DestinationContextProvider';
 import { Image } from 'expo-image';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { useNavigation } from '@react-navigation/native';
+import * as ImagePicker from 'expo-image-picker';
 
 export default function EditDest() {
   //-------- Navigation instance: --------
@@ -17,6 +18,7 @@ export default function EditDest() {
   const [images, setImages] = useState<string[]>([]);
   const [newImageToList, setNewImageToList] = useState<string>('')
   const [desc, setDesc] = useState('');
+  const [galleryImg, setGalleryImg] = useState<string[]>([]);
 
   //-------- Initial useEffect: --------
   useEffect(() => {
@@ -29,7 +31,24 @@ export default function EditDest() {
   const [editModal, setEditModal] = useState(false);
   const toggleSwitch = () => setIsDirectFlight(previousState => !previousState);
 
-    //-------- Edit Modal: --------
+  //-------- Gallery Image Picker: --------
+  const pickImage = async () => {
+    // No permissions request is necessary for launching the image library
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.canceled) {
+      setGalleryImg([...galleryImg, result.assets[0].uri]);
+    }
+  };
+
+  //-------- Edit Modal: --------
   const EditModal = () => {
     return (
       <View>
@@ -80,7 +99,7 @@ export default function EditDest() {
                 <Image source={currentDest.main_img} style={{ height: 200, width: 200 }} />
               </View>
 
-              
+
               <TouchableOpacity style={[styles.button]} onPress={() => navigation.navigate('Capture')}>
                 <Text style={[styles.margin, styles.textStyle]}>Capture Image</Text>
               </TouchableOpacity>
@@ -131,8 +150,18 @@ export default function EditDest() {
             <Text style={styles.textStyle}>{item.destination_name}</Text>
           </TouchableOpacity>
         }
+
       />
-      
+      <TouchableOpacity style={[styles.button, { flexDirection: 'row', margin: 10, justifyContent: 'center' }]} onPress={pickImage}>
+        <Text>Gallery</Text>
+      </TouchableOpacity>
+      {galleryImg && <FlatList
+      data={galleryImg}
+      horizontal={true}
+      renderItem={({item})=>
+        <Image source={{uri:item}} style={{height:200, width:150, margin:5}}/>}
+      />}
+
       {editModal && EditModal()}
     </View>
   )
@@ -144,6 +173,11 @@ const styles = StyleSheet.create({
     height: 'auto',
     paddingVertical: 25,
     marginTop: 25
+  },
+  text: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: 'white',
   },
   mainTitle: {
     fontSize: 25,
